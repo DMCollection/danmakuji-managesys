@@ -121,6 +121,7 @@ const user = {
             "/listusers":true,
             "/uploadtest":true,
             "/bangumilist":true,
+            "/episodelist":true,
           };
            dispatch('GenerateRoutes', permission);
         }

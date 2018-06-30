@@ -58,7 +58,7 @@ axios.interceptors.response.use(
 );
 
 //本地开发请设置为"/api"
-const baseURL = "http://10.0.46.28:8080";
+const baseURL = "http://10.0.46.20:8080";
 // const baseURL = "/api";
 
 //  登录相关
@@ -427,6 +427,19 @@ const register = data => {
     return axios.post(`${baseURL}/users`,data)
 };
 
+
+// 获取指定番剧的所有剧集
+const getEpsByBid = bid => axios.get(`${baseURL}/admin/episodes/bid/${bid}`)
+
+// 获取指定剧集关联的所有视频
+const getVideosByEpid = epid => axios.get(`${baseURL}/admin/videos/eid/${epid}`)
+
+// 获取最新默认所有剧集
+const getEps = bid => axios.get(`${baseURL}/admin/episodes`)
+
+// 删除指定id剧集
+const delEpByEpid = epid => axios.delete(`${baseURL}/admin/videos/${epid}`)
+
 export default {
   login,
   logout,
@@ -485,5 +498,9 @@ export default {
   addVideo,
   editVideo,
   deleteVideo,
-  deleteVideos
+  deleteVideos,
+  getEpsByBid,
+  getVideosByEpid,
+  getEps,
+  delEpByEpid
 };

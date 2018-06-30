@@ -141,6 +141,12 @@
                 </el-menu-item>
             </router-link>
 
+            <router-link to="/episodelist">
+                <el-menu-item index="/episodelist">
+                    <i class="fa fa-home" aria-hidden="true"></i> 分集信息
+                </el-menu-item>
+            </router-link>
+
         </template>    
         
 

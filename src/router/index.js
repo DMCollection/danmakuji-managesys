@@ -46,7 +46,8 @@ const StudentUpdate = _import('student/studentUpdate');
 const UserList = _import('user/userList');
 const UploadTest = _import('user/uploadTest');
 
-const BangumiList = _import('bangumi/bangumiList');
+const BangumiList = _import('bangumi/bangumiList')
+const EpisodeList = _import('episode/episodeList')
 
 Vue.use(Router);
 
@@ -145,7 +146,8 @@ const constantRouterMap = [
    redirect: 'noredirect',
    name: '番剧管理',
    children:[
-     {path: '/bangumilist',component: BangumiList, name:'番剧信息'}
+     {path: '/bangumilist',component: BangumiList, name:'番剧信息'},
+     {path: '/episodelist',name: 'episodeList', component: EpisodeList}
    ]
  },
   
